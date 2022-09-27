@@ -35,4 +35,15 @@ echo gettype($isFunny) . " " .  $isFunny . "\n";
 echo gettype($netWorth) . " " .  $netWorth . "\n";
 echo gettype($value) . " " .  $value . "\n";
 
-echo "First name is ${firstName}";
+echo "First name is ${firstName}" . "\n";
+
+// number operations
+$a = 8;
+$b = 9;
+$c = 2.2;
+
+echo ($a + $b) * $c . "\n";
+echo $a - $b . "\n";
+echo $a * $b . "\n";
+echo $a / $b . "\n";
+echo $a % $b . "\n";
