@@ -47,3 +47,61 @@ echo $a - $b . "\n";
 echo $a * $b . "\n";
 echo $a / $b . "\n";
 echo $a % $b . "\n";
+
+// arrays
+$numbers = [1, 2, 3, 4, 5];
+$names = ['greg', 'bill', 'jimmy'];
+
+var_dump($numbers);
+var_dump($names);
+
+// associative arrays
+$colors = [
+    1 => 'red',
+    2 => 'green',
+    3 => 'blue',
+];
+
+echo $colors['1'] . "\n";
+var_dump($colors);
+
+$hex = [
+    'red' => '#f00',
+    'green' => '#0f0',
+    'blue' => '#00f',
+];
+
+echo $hex['red'] . "\n";
+var_dump($hex);
+
+// multi-dimensional arrays
+$person1 = [
+    'first_name' => 'Greg',
+    'last_name' => 'Ross',
+    'email' => 'g@g.com',
+];
+
+$people = [
+    $person1, //   [...$person1]
+    [
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+        'email' => 'john@gmail.com',
+    ],
+    [
+        'first_name' => 'Jane',
+        'last_name' => 'Doe',
+        'email' => 'jane@gmail.com',
+    ],
+];
+
+var_dump($people);
+echo $people[0]['first_name'] . "\n";
+echo $people[2]['email'] . "\n";
+
+// Encode to JSON
+var_dump(json_encode($people));
+
+// Decode from JSON
+$jsonobj = '{"first_name":"Greg","last_name": "Ross","email":"g@g.com"}';
+var_dump(json_decode($jsonobj));
