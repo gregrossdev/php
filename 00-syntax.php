@@ -48,7 +48,10 @@ echo $a * $b . "\n";
 echo $a / $b . "\n";
 echo $a % $b . "\n";
 
-// arrays
+/*
+---
+Arrays
+-------- */
 $numbers = [1, 2, 3, 4, 5];
 $names = ['greg', 'bill', 'jimmy'];
 
@@ -105,3 +108,32 @@ var_dump(json_encode($people));
 // Decode from JSON
 $jsonobj = '{"first_name":"Greg","last_name": "Ross","email":"g@g.com"}';
 var_dump(json_decode($jsonobj));
+
+/*
+---
+Loops
+-------- */
+// for
+for ($i = 0; $i < 10; $i++) {
+    echo $i."\n";
+}
+
+// foreach
+$fruits = ["Banana", "Apple", "Orange"];
+foreach ($fruits as $i => $fruit) {
+    echo $i . ' ' . $fruit . "\n";
+}
+
+// foreach associative array
+$person = [
+    'name' => 'Greg',
+    'surname' => 'Ross',
+    'age' => 35,
+    'hobbies' => ['Meditation', 'Reading'],
+];
+foreach ($person as $key => $value) {
+    if ($key === 'hobbies') {
+        break;
+    }
+    echo $key . ' ' . $value . "\n";
+}
