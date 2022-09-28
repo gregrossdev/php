@@ -137,3 +137,32 @@ foreach ($person as $key => $value) {
     }
     echo $key . ' ' . $value . "\n";
 }
+
+/*
+---
+Functions
+------------ */
+function sum($a, $b)
+{
+    return $a + $b;
+}
+
+echo sum(4,5) . "\n";
+echo sum(9,10) . "\n";
+
+// spread operator
+function sumAll(...$nums)
+{
+    $sum = 0;
+    foreach ($nums as $num) $sum += $num;
+    return $sum;
+}
+echo sumAll(1, 2, 3, 4, 6) . "\n";
+echo sumAll(2, 4, 5, 4, 6) . "\n";
+
+// arrow
+function sumArrow(...$nums)
+{
+    return array_reduce($nums, fn($carry, $n) => $carry + $n);
+}
+echo sumArrow(1, 2, 3, 4, 6) . "\n";
