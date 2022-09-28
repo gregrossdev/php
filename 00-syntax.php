@@ -166,3 +166,46 @@ function sumArrow(...$nums)
     return array_reduce($nums, fn($carry, $n) => $carry + $n);
 }
 echo sumArrow(1, 2, 3, 4, 6) . "\n";
+
+/*
+---
+Conditionals
+--------------- */
+$age = 20;
+$salary = 300000;
+
+if ($age > 20) {
+    echo "1" . "\n";
+} else {
+    echo "2" . "\n";
+}
+
+// if AND
+if ($age > 20 && $salary === 300000) {
+    echo "AND" . "\n";
+}
+// if OR
+if ($age > 20 OR $salary === 300000) {
+    echo "OR" . "\n";
+}
+
+// ternary if
+echo $age < 22 ? 'Young'. "\n" : 'Old' . "\n";
+echo "Ternary" . "\n";
+
+// switch
+$userRole = 'admin'; // admin, editor, user
+
+switch ($userRole) {
+    case 'admin':
+        echo 'You can do anything'. "\n";
+        break;
+    case 'editor';
+        echo 'You can edit content'. "\n";
+        break;
+    case 'user':
+        echo 'You can view posts and comment'. "\n";
+        break;
+    default:
+        echo 'Unknown role' . "\n";
+}
