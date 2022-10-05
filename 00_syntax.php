@@ -209,3 +209,79 @@ switch ($userRole) {
     default:
         echo 'Unknown role' . "\n";
 }
+
+/*
+---
+Object Oriented Programming
+-------------------------------- */
+class User {
+
+    private string $name;
+    public string $email;
+    public string $password;
+
+    public function __construct($name, $email, $password) {
+        $this->name = $name;
+        $this->email = $email;
+        $this->password = $password;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+
+    public function login(): string
+    {
+        return "User $this->name is logged in.";
+    }
+
+}
+
+$user1 = new User('greg', 'greg@gmail.com', '123456');
+echo $user1->getName()."\n";
+echo $user1->login()."\n";
+
+var_dump($user1);
+
+class Admin extends User {
+    private string $title;
+
+    public function __construct($name, $email, $password, $title)
+    {
+        parent::__construct($name, $email, $password);
+        $this->title = $title; 
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+}
+
+$employee1 = new Admin('John','johndoe@gmail.com','123456','Manager');
+echo $employee1->getTitle();
