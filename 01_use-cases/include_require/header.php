@@ -10,5 +10,5 @@
 <body>
 <header>
     <a href="./index.php">Home</a>
-    <a href="./page.php">About</a>
+    <a href="./page.php">Page</a>
 </header>
