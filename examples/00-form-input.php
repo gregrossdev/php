@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<form action="00-form-input.php" method="GET">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
     <h2>Username:</h2>
     <input type="text" name="username">
     <br />

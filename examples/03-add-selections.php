@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<form action="03-add-selections.php" method="POST">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     <h2>
         <input type="checkbox" name="people[]" value="Greg">
         <label>Person 1: Greg</label>

@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<form action="01-simple-calculator.php" method="GET">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
     <h2>Number 1:</h2>
     <input type="number" name="n1">
     <p>+</p>

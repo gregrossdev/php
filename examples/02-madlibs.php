@@ -27,7 +27,7 @@
 </head>
 <body>
 
-<form action="02-madlibs.php" method="GET">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
     <h2>Color 1:</h2>
     <input type="text" name="color1">
     <h2>Color 2:</h2>

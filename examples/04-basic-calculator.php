@@ -39,7 +39,7 @@
 </head>
 <body>
 
-<form action="04-basic-calculator.php" method="GET">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
     <h2>Num1:</h2>
     <input type="number" name="num1">
     <h2>Operator:</h2>
