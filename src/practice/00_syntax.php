@@ -29,11 +29,11 @@ $value = null;
 var_dump($firstName, $age, $isFunny, $netWorth, $value);
 
 // concatenation
-echo gettype($firstName) . " " .  $firstName . "\n";
-echo gettype($age) . " " .  $age . "\n";
-echo gettype($isFunny) . " " .  $isFunny . "\n";
-echo gettype($netWorth) . " " .  $netWorth . "\n";
-echo gettype($value) . " " .  $value . "\n";
+echo gettype($firstName) . " 00_syntax.php" .  $firstName . "\n";
+echo gettype($age) . " 00_syntax.php" .  $age . "\n";
+echo gettype($isFunny) . " 00_syntax.php" .  $isFunny . "\n";
+echo gettype($netWorth) . " 00_syntax.php" .  $netWorth . "\n";
+echo gettype($value) . " 00_syntax.php" .  $value . "\n";
 
 echo "First name is ${firstName}" . "\n";
 
