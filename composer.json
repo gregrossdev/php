@@ -2,7 +2,7 @@
     "name": "gregr/php",
     "autoload": {
         "psr-4": {
-            "Gregr\\Php\\": "src/"
+            "App\\": "src"
         }
     },
     "authors": [
