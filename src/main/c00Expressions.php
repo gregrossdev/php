@@ -44,4 +44,24 @@ class c00Expressions
         else
             return 21 - $n;
     }
+
+    /**
+     * intMax(1, 2, 3) → 3
+     * intMax(1, 3, 2) → 3
+     * intMax(3, 2, 1) → 3
+     *
+     * @param int $a
+     * @param int $b
+     * @param int $c
+     * @return int
+     *      find largest parameter
+     */
+    public function intMax(int $a, int $b, int $c) : int
+    {
+       $max = ($a > $b) ? $a : $b;
+        if($max < $c)
+            $max = $c;
+
+        return $max;
+    }
 }

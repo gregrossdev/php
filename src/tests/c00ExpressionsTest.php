@@ -26,4 +26,13 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals(2, $expressions->diff21(22), "Input: diff21(22)");
         $this->assertEquals(31, $expressions->diff21(-10), "Input: diff21(-10)");
     }
+
+    public function testIntMax()
+    {
+        $expressions = new c00Expressions();
+
+        $this->assertEquals(3, $expressions->intMax(1,2, 3), "Input: intMax(1, 2, 3)");
+        $this->assertEquals(3, $expressions->intMax(1,3, 2), "Input: intMax(1, 3, 2)");
+        $this->assertEquals(3, $expressions->intMax(3,2, 1), "Input: intMax(3, 2, 1)");
+    }
 }
