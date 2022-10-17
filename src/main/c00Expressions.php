@@ -64,4 +64,23 @@ class c00Expressions
 
         return $max;
     }
+
+    /**
+     * max1020(11, 19) → 19
+     * max1020(19, 11) → 19
+     * max1020(11, 9) → 11
+     *
+     * @param int $a
+     * @param int $b
+     * @return int
+     *      if parameters within range 10 - 20 find largest value of the parameters
+     *      else 0
+     */
+    public function max1020(int $a, int $b) : int
+    {
+        $a = ($a >= 10 && $a <= 20) ? $a : 0;
+        $b = ($b >= 10 && $b <= 20) ? $b : 0;
+
+        return ($a > $b) ? $a : $b;
+    }
 }
