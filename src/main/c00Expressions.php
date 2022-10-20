@@ -73,7 +73,7 @@ class c00Expressions
      * @param int $a
      * @param int $b
      * @return int
-     *      if parameters within range 10 - 20 find largest value of the parameters
+     *      if parameters within range 10 - 20 find the largest value of the parameters
      *      else 0
      */
     public function max1020(int $a, int $b) : int
@@ -83,4 +83,26 @@ class c00Expressions
 
         return ($a > $b) ? $a : $b;
     }
+
+//    /**
+//     * dateFashion(5, 10) → 2
+//     * dateFashion(5, 2) → 0
+//     * dateFashion(5, 5) → 1
+//     *
+//     * @param int $you
+//     * @param int $date
+//     * @return int
+//     *      if both parameters are 8 or more return 2
+//     *      else if both parameters are 2 or less return 0
+//     *      else return 0
+//     */
+//    public function dateFashion(int $you, int $date): int
+//    {
+//        if ($you >= 8 || $date >= 8)
+//            return 2;
+//        else if ($you <= 2 || $date <= 2)
+//            return 0;
+//        else
+//            return 1;
+//    }
 }
