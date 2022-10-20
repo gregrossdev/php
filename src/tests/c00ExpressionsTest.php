@@ -89,4 +89,15 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals(2, $expressions->loneSum(3, 2, 3), "Input: loneSum(3, 2, 3)");
         $this->assertEquals(0, $expressions->loneSum(3, 3, 3), "Input: loneSum(3, 3, 3)");
     }
+
+    public function testLuckySum() : void
+    {
+        $expressions = new c00Expressions();
+
+        $this->assertEquals(6, $expressions->luckySum(1, 2, 3), "Input: luckySum(1, 2, 3)");
+        $this->assertEquals(3, $expressions->luckySum(1, 2, 13), "Input: luckySum(1, 2, 13)");
+        $this->assertEquals(1, $expressions->luckySum(1, 13, 3), "Input: luckySum(1, 13, 3)");
+        $this->assertEquals(3, $expressions->luckySum(13, 1, 3), "Input: luckySum(13, 1, 3)");
+        $this->assertEquals(0, $expressions->luckySum(13, 13, 3), "Input: luckySum(13, 13, 3)");
+    }
 }

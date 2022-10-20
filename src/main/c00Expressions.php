@@ -188,6 +188,33 @@ class c00Expressions
        return $sum;
     }
 
+    /**
+     * luckySum(1, 2, 3) → 6
+     * luckySum(1, 2, 13) → 3
+     * luckySum(1, 13, 3) → 1
+     * luckySum(13, 1, 3) → 3
+     * luckySum(13, 13, 3) → 0
+     *
+     * @param
+     * @param
+     * @param
+     * @return int
+     *      sum parameters
+     *      if any parameter is a 13 then exclude that value and the next value from the sum
+     */
+    public function luckySum(int $a, int $b, int $c) : int
+    {
+        $sum = 0;
+        if ($a != 13)
+            $sum += $a;
+        if ($a != 13 && $b != 13)
+            $sum += $b;
+        if ($b != 13 && $c != 13)
+            $sum += $c;
+
+        return $sum;
+    }
+
 
     
 }
