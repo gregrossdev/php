@@ -163,6 +163,31 @@ class c00Expressions
         else return 1;
     }
 
+    /**
+     * loneSum(1, 2, 3) → 6
+     * loneSum(3, 2, 3) → 2
+     * loneSum(3, 3, 3) → 0
+     *
+     * @param int $a
+     * @param int $b
+     * @param int $c
+     * @return int
+     *      sum parameters
+     *      if any of the parameters are the same value exclude from sum
+     */
+    public function loneSum(int $a, int $b, int $c) : int
+    {
+       $sum = 0;
+       if ($a != $b && $a != $c)
+           $sum += $a;
+       if ($b != $a && $b != $c)
+           $sum += $b;
+       if ($c != $a && $c != $b)
+           $sum += $c;
+
+       return $sum;
+    }
+
 
     
 }

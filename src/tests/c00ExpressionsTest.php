@@ -80,4 +80,13 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals(0, $expressions->teaParty(3, 8), "Input: teaParty(3, 8)");
         $this->assertEquals(2, $expressions->teaParty(20, 6), "Input: teaParty(20, 6)");
     }
+
+    public function testLoneSum() : void
+    {
+        $expressions = new c00Expressions();
+
+        $this->assertEquals(6, $expressions->loneSum(1, 2, 3), "Input: loneSum(1, 2, 3)");
+        $this->assertEquals(2, $expressions->loneSum(3, 2, 3), "Input: loneSum(3, 2, 3)");
+        $this->assertEquals(0, $expressions->loneSum(3, 3, 3), "Input: loneSum(3, 3, 3)");
+    }
 }
