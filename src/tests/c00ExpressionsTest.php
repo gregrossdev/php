@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class c00ExpressionsTest extends TestCase
 {
+
     public function testSumDouble()
     {
         $expressions = new c00Expressions();
@@ -53,8 +54,12 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals( 1, $expressions->dateFashion(5, 5), "Input: dateFashion(5, 5)");
     }
 
-    public function testSortaSum()
+    public function testSortaSum() : void
     {
+        $expressions = new c00Expressions();
 
+        $this->assertEquals(7, $expressions->sortaSum(3, 4), "Input: sortaSum(3, 4)");
+        $this->assertEquals( 20, $expressions->sortaSum(9, 4), "Input: sortaSum(9, 4)");
+        $this->assertEquals( 21, $expressions->sortaSum(10, 11), "Input: sortaSum(10, 11)");
     }
 }

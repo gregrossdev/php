@@ -106,24 +106,24 @@ class c00Expressions
             return 1;
     }
 
-//    /**
-//     * sortaSum(3, 4) → 7
-//     * sortaSum(9, 4) → 20
-//     * sortaSum(10, 11) → 21
-//     *
-//     * @param int $a
-//     * @param int $b
-//     * @return int
-//     *      sum parameters
-//     *      if sum is in range 10 - 19 return 20
-//     *      else return sum
-//     */
-//    public function sortaSum(int $a, int $b): int
-//    {
-//        $sum = $a + $b;
-//
-//        return ($sum >= 10 && $sum <= 19) ? 20 : $sum;
-//    }
+    /**
+     * sortaSum(3, 4) → 7
+     * sortaSum(9, 4) → 20
+     * sortaSum(10, 11) → 21
+     *
+     * @param int $a
+     * @param int $b
+     * @return int
+     *      sum parameters
+     *      if sum is in range 10 - 19 return 20
+     *      else return sum
+     */
+    public function sortaSum(int $a, int $b): int
+    {
+        $sum = $a + $b;
+
+        return ($sum >= 10 && $sum <= 19) ? 20 : $sum;
+    }
 
 
 
