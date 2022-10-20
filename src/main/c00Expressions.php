@@ -125,7 +125,23 @@ class c00Expressions
         return ($sum >= 10 && $sum <= 19) ? 20 : $sum;
     }
 
-
+    /**
+     * teenSum(3, 4) → 7
+     * teenSum(10, 13) → 19
+     * teenSum(13, 2) → 19
+     *
+     * @param int $a
+     * @param int $b
+     * @return int
+     *      sum parameters
+     *      if either parameter is in range 13 - 19 return 19
+     *      else return sum
+     */
+    public function teenSum(int $a, int $b): int
+    {
+       $sum = $a + $b;
+       return ($a >= 13 && $a <= 19) || ($b >= 13 && $b <= 19) ? 19 : $sum;
+    }
 
 
 
