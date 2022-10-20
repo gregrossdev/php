@@ -143,7 +143,25 @@ class c00Expressions
        return ($a >= 13 && $a <= 19) || ($b >= 13 && $b <= 19) ? 19 : $sum;
     }
 
-
+    /**
+     * teaParty(6, 8) → 1
+     * teaParty(3, 8) → 0
+     * teaParty(20, 6) → 2
+     *
+     * @param int $tea
+     * @param int $candy
+     * @return int
+     *      return outcome as 0=bad, 1=good, or 2=great
+     *      if both parameters are at least 5 return 1
+     *      if one parameter is double the amount of the other return 2
+     *      if either parameter is less than 5 return 0
+     */
+    public function teaParty(int $tea, int $candy) : int
+    {
+        if($tea < 5 || $candy < 5) return 0;
+        else if ($tea / $candy >= 2 || $candy / $tea >= 2) return 2;
+        else return 1;
+    }
 
 
     

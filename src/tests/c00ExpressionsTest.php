@@ -71,4 +71,13 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals(19, $expressions->teenSum(10, 13), "Input: teenSum(10, 13)");
         $this->assertEquals(19, $expressions->teenSum(13, 2), "Input: teenSum(13, 2)");
     }
+
+    public function testTeaParty() : void
+    {
+        $expressions = new c00Expressions();
+
+        $this->assertEquals(1, $expressions->teaParty(6, 8), "Input: teaParty(6, 8)");
+        $this->assertEquals(0, $expressions->teaParty(3, 8), "Input: teaParty(3, 8)");
+        $this->assertEquals(2, $expressions->teaParty(20, 6), "Input: teaParty(20, 6)");
+    }
 }
