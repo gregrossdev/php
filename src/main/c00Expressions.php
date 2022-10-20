@@ -84,25 +84,51 @@ class c00Expressions
         return ($a > $b) ? $a : $b;
     }
 
+    /**
+     * dateFashion(5, 10) → 2
+     * dateFashion(5, 2) → 0
+     * dateFashion(5, 5) → 1
+     *
+     * @param int $you
+     * @param int $date
+     * @return int
+     *      if both parameters are 8 or more return 2
+     *      else if both parameters are 2 or less return 0
+     *      else return 0
+     */
+    public function dateFashion(int $you, int $date): int
+    {
+        if ($you >= 8 || $date >= 8)
+            return 2;
+        else if ($you <= 2 || $date <= 2)
+            return 0;
+        else
+            return 1;
+    }
+
 //    /**
-//     * dateFashion(5, 10) → 2
-//     * dateFashion(5, 2) → 0
-//     * dateFashion(5, 5) → 1
+//     * sortaSum(3, 4) → 7
+//     * sortaSum(9, 4) → 20
+//     * sortaSum(10, 11) → 21
 //     *
-//     * @param int $you
-//     * @param int $date
+//     * @param int $a
+//     * @param int $b
 //     * @return int
-//     *      if both parameters are 8 or more return 2
-//     *      else if both parameters are 2 or less return 0
-//     *      else return 0
+//     *      sum parameters
+//     *      if sum is in range 10 - 19 return 20
+//     *      else return sum
 //     */
-//    public function dateFashion(int $you, int $date): int
+//    public function sortaSum(int $a, int $b): int
 //    {
-//        if ($you >= 8 || $date >= 8)
-//            return 2;
-//        else if ($you <= 2 || $date <= 2)
-//            return 0;
-//        else
-//            return 1;
+//        $sum = $a + $b;
+//
+//        return ($sum >= 10 && $sum <= 19) ? 20 : $sum;
 //    }
+
+
+
+
+
+
+    
 }

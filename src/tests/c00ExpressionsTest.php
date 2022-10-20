@@ -1,12 +1,11 @@
 <?php
 
+namespace App\main;
 
-use App\main\c00Expressions;
 use PHPUnit\Framework\TestCase;
 
 class c00ExpressionsTest extends TestCase
 {
-
     public function testSumDouble()
     {
         $expressions = new c00Expressions();
@@ -45,12 +44,17 @@ class c00ExpressionsTest extends TestCase
         $this->assertEquals(11, $expressions->max1020(11, 9), "Input: max1020(11, 9)");
     }
 
-//    public function dateFashion() : void
-//    {
-//        $expressions = new c00Expressions();
-//
-//        $this->assertEquals( 2, $expressions->dateFashion(5, 10), "Input: dateFashion(5, 10)");
-//        $this->assertEquals( 0, $expressions->dateFashion(5, 2), "Input: dateFashion(5, 2)");
-//        $this->assertEquals( 1, $expressions->dateFashion(5, 5), "Input: dateFashion(5, 5)");
-//    }
+    public function testDateFashion() : void
+    {
+        $expressions = new c00Expressions();
+
+        $this->assertEquals( 2, $expressions->dateFashion(5, 10), "Input: dateFashion(5, 10)");
+        $this->assertEquals( 0, $expressions->dateFashion(5, 2), "Input: dateFashion(5, 2)");
+        $this->assertEquals( 1, $expressions->dateFashion(5, 5), "Input: dateFashion(5, 5)");
+    }
+
+    public function testSortaSum()
+    {
+
+    }
 }
