@@ -1,0 +1,17 @@
+{
+    "name": "gregr/gio",
+    "autoload": {
+        "psr-4": {
+            "Gregr\\Gio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gregory Ross",
+            "email": "gregross.dev@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
